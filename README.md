@@ -1,6 +1,19 @@
 # Microservice
  Open source template written in Go that creates a secure server and gateway where gRPC service calls are converted from a REST endpoint.
 
+# Installation
+To install clone the repo and run `docker-compose build` then `docker-compose up` from the root directory.
+
+NOTE: You will need to connect to MongoDB through MongoDB Compass to create the databases for the Carts Service and the Items service until the DB schema is saved in the repo and initialized in the docker-compose file.
+  - Open MongoDB Compass
+  - Connect to the local Docker MongoDB instance with `mongodb://172.25.0.1:27017`
+  - Create a database called `carts` with a collection called `cart`
+  - Create a database called `items` with a collection called `item`
+
+NOTE: You will need to hardcode your Docker cluster IP address for the MongoDB connection in the docker-compose file until the IP is made static.
+  - After running `docker-compose up` for the first time you will see your local cluster IP address in the logging
+  - From the root folder edit the `docker-compose.yml` file IP address wherever you see `mongodb://`
+
 # Template Service
 ## Version: 1.0
 
