@@ -6,9 +6,8 @@ To install clone the repo and run `docker-compose build` then `docker-compose up
 
 NOTE: You will need to connect to MongoDB through MongoDB Compass to create the databases for the Carts Service and the Items service until the DB schema is saved in the repo and initialized in the docker-compose file.
   - Open MongoDB Compass
-  - Connect to the local Docker MongoDB instance with `mongodb://172.25.0.1:27017`
-  - Create a database called `carts` with a collection called `cart`
-  - Create a database called `items` with a collection called `item`
+  - Connect to the local Docker MongoDB instance with `mongodb://localhost:27017`
+  - Create a database called `template` with a collection called `template`
 
 NOTE: You will need to hardcode your Docker cluster IP address for the MongoDB connection in the docker-compose file until the IP is made static.
   - After running `docker-compose up` for the first time you will see your local cluster IP address in the logging
