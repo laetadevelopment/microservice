@@ -146,7 +146,7 @@ func (s *templateServiceServer) Delete(ctx context.Context, req *v1.DeleteReques
 	}, nil
 }
 
-// List all template available via MongoDB Client
+// List all templates available via MongoDB Client
 func (s *templateServiceServer) List(ctx context.Context, req *v1.ListRequest) (*v1.ListResponse, error) {
 	if err := s.checkAPI(req.Api); err != nil {
 		return nil, err
